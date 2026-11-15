@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storm — adversary simulation & red-team testing</title>
+<meta name="description" content="Storm is the offensive half of StormShield: controlled adversary-simulation exercises for authorized security testing and awareness training.">
+<style>
+  :root{
+    --bg:#100b0b; --panel:#1b1313; --line:#2a1d1d;
+    --ink:#f3ebe8; --muted:#c3a9a3; --accent:#ff7a59; --accent2:#f0b429;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  header{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+  .kicker{letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--accent2);margin:0 0 14px}
+  h1{font-size:44px;line-height:1.1;margin:0 0 16px;font-weight:700}
+  .lede{font-size:20px;color:var(--muted);margin:0;max-width:62ch}
+  section{padding:44px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:22px;margin:0 0 18px}
+  p{color:var(--ink)}
+  .muted{color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:8px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .card h3{margin:0 0 8px;font-size:16px;color:var(--accent)}
+  .card p{margin:0;font-size:14.5px;color:var(--muted)}
+  ul.clean{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  ul.clean li{padding-left:22px;position:relative;color:var(--muted)}
+  ul.clean li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:2px;background:var(--accent)}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .tag{font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:#150e0e}
+  .notice{background:#241414;border:1px solid #4a2a22;border-radius:12px;padding:18px 20px;margin-top:8px}
+  .notice strong{color:var(--accent2)}
+  footer{padding:36px 0 64px;color:var(--muted);font-size:14px}
+  footer a{color:var(--accent);text-decoration:none}
+  @media(max-width:600px){h1{font-size:34px}.lede{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kicker">EchlonLabs · Offensive security</p>
+    <h1>Storm</h1>
+    <p class="lede">The offensive half of StormShield. Storm runs controlled adversary-simulation exercises — the work security teams use to test their detection, response, and people — against targets that have agreed to be tested.</p>
+  </header>
+
+  <section>
+    <h2>What it is</h2>
+    <p class="muted">Defences are only as good as the last time someone tried to get past them. Storm is a red-team toolkit for running that test on purpose: structured, scoped, and measured. It exists so an organisation can find its own gaps before someone uninvited does — and so Storm's findings feed straight into <strong style="color:var(--ink)">Shield</strong>, the defensive side, to close them.</p>
+  </section>
+
+  <section>
+    <h2>What it covers</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Awareness testing</h3>
+        <p>Simulated social-engineering campaigns that measure how an organisation's people respond, to target training where it's actually needed.</p>
+      </div>
+      <div class="card">
+        <h3>Controlled exploit testing</h3>
+        <p>Staged attack-chain exercises run in an isolated lab, to validate whether a defence actually holds under a realistic sequence.</p>
+      </div>
+      <div class="card">
+        <h3>Campaign tracking</h3>
+        <p>A dashboard that records how an authorised engagement unfolds, so results are reviewable and reportable rather than anecdotal.</p>
+      </div>
+      <div class="card">
+        <h3>Feeds the defence</h3>
+        <p>Findings hand off to Shield's workflow engine, turning an offensive result into a tracked defensive fix.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Rules of engagement</h2>
+    <div class="notice">
+      <p style="margin:0"><strong>Authorised testing only.</strong> Storm is built for engagements run with the explicit, written permission of the system owner, against systems and people defined as in-scope. It is a tool for improving security, not for attacking anyone. Unauthorised use against systems you do not own or are not permitted to test is illegal, and is not a use this project supports.</p>
+    </div>
+    <div class="tags" style="margin-top:18px">
+      <span class="tag">Python · Flask</span>
+      <span class="tag">Isolated lab</span>
+      <span class="tag">Self-hosted</span>
+      <span class="tag">Authorised engagements</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>Storm is intended solely for authorised security testing you are permitted to carry out. You are responsible for complying with all applicable laws.</p>
+    <p>An <strong style="color:var(--ink)">EchlonLabs</strong> project · <a href="https://echlonlabs.com">echlonlabs.com</a></p>
+  </footer>
+</div>
+</body>
+</html>
